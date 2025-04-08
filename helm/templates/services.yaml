@@ -10,6 +10,7 @@ spec:
     tier: web-jenkins
     project: expense
   ports:
-  - protocol: TCP
-    port: {{ .Values.service.port }}
-    targetPort: {{ .Values.service.targetport }}
+  - name: frontend-port
+    protocol: TCP
+    port: "{{ .Values.service.port }}"
+    targetPort: "{{ .Values.service.targetport }}"
