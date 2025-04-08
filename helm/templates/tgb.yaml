@@ -1,0 +1,11 @@
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: frontend
+  namespace: rnk-expense
+spec:
+  serviceRef:
+    name: frontend-svc # route traffic to the awesome-service
+    port: 80
+  targetGroupARN: {{ .Values.tgb.arn }}
+  targetType: ip

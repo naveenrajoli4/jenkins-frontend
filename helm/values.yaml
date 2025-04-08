@@ -1,0 +1,11 @@
+deployment:
+  imageversion: IMAGEVERSION
+  imageURL: 135808959960.dkr.ecr.us-east-1.amazonaws.com/kdp-expense-prod/frontend
+hpa:
+  utilisation: 20
+service:
+  port: 80
+  targetport: 8080
+tgb:
+  arn: arn:aws:elasticloadbalancing:us-east-1:135808959960:targetgroup/kdp-expense-prod-frontend-tg/a7c36dbd505b3299
+
